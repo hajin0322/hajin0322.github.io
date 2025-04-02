@@ -1,6 +1,6 @@
 /**
- * Reset some basic elements
- */
+* Reset some basic elements
+*/
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -9,8 +9,8 @@ dl, dd, ol, ul, figure {
 }
 
 /**
- * Basic styling
- */
+* Basic styling
+*/
 body {
     /* Notion은 깔끔한 산세리프 계열을 사용합니다 */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -26,8 +26,8 @@ body {
 }
 
 /**
- * Maintain vertical rhythm
- */
+* Maintain vertical rhythm
+*/
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
@@ -35,9 +35,9 @@ ul, ol, dl, figure {
 }
 
 /**
- * Articles (Post Container)
- * 노션 스타일은 깔끔한 흰색 배경과 약간의 라운딩, 여백을 강조합니다.
- */
+* Articles (Post Container)
+* 노션 스타일은 깔끔한 흰색 배경과 약간의 라운딩, 여백을 강조합니다.
+*/
 article {
     background: #fff;
     border: 1px solid #e0e0e0;
@@ -47,8 +47,8 @@ article {
 }
 
 /**
- * Entry Content
- */
+* Entry Content
+*/
 article > .entry-content {
     font-size: 1rem;
     line-height: 1.8;
@@ -76,8 +76,8 @@ article > .entry-content {
 }
 
 /**
- * Images
- */
+* Images
+*/
 img {
     max-width: 100%;
     border-radius: 4px;
@@ -86,8 +86,8 @@ img {
 }
 
 /**
- * Figures
- */
+* Figures
+*/
 figure {
     margin: 1.5rem 0;
     text-align: center;
@@ -100,15 +100,15 @@ figcaption {
 }
 
 /**
- * Lists
- */
+* Lists
+*/
 ul, ol {
     margin-left: 1.5rem;
 }
 
 /**
- * Headings
- */
+* Headings
+*/
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin-bottom: 0.75rem;
@@ -116,8 +116,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
- * Links
- */
+* Links
+*/
 a {
     color: #269462;
     text-decoration: none;
@@ -130,9 +130,9 @@ a:hover {
 }
 
 /**
- * Blockquotes
- * 노션의 인용구는 심플하면서도 메인 컬러로 포인트를 줍니다.
- */
+* Blockquotes
+* 노션의 인용구는 심플하면서도 메인 컬러로 포인트를 줍니다.
+*/
 blockquote {
     margin: 1rem 0;
     padding-left: 1rem;
@@ -142,9 +142,9 @@ blockquote {
 }
 
 /**
- * Code formatting
- * 깔끔한 배경과 라운딩 처리로 Notion의 코드 블록 느낌을 구현합니다.
- */
+* Code formatting
+* 깔끔한 배경과 라운딩 처리로 Notion의 코드 블록 느낌을 구현합니다.
+*/
 pre, code {
     font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-size: 0.9rem;
@@ -167,9 +167,9 @@ code {
 }
 
 /**
- * Wrapper
- * 콘텐츠 너비를 제한해 중앙 정렬합니다.
- */
+* Wrapper
+* 콘텐츠 너비를 제한해 중앙 정렬합니다.
+*/
 .wrapper {
     max-width: 800px;
     margin: 0 auto;
@@ -177,8 +177,8 @@ code {
 }
 
 /**
- * Clearfix
- */
+* Clearfix
+*/
 %clearfix {
     &:after {
         content: "";
@@ -188,8 +188,8 @@ code {
 }
 
 /**
- * Icons (if used)
- */
+* Icons (if used)
+*/
 .icon > svg {
     display: inline-block;
     width: 16px;
