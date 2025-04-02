@@ -13,4 +13,4 @@ Based on the [Libretto Wordpress theme](https://wordpress.org/themes/libretto/).
 
 ## URL
 
-- https://hajin0322.github.io/blog/
+- https://hajin0322.github.io/
