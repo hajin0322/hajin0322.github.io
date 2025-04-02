@@ -17,7 +17,7 @@ title: HAJIN
 email: daramg0314@cau.ac.kr
 description: > # this means to ignore newlines until "baseurl:"
   In pursuit of your dreams,
-  Don't forget God.
+  \nDon't forget God.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://hajin0322.github.io" # the base hostname & protocol for your site
 github_username:    hajin0322
