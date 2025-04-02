@@ -4,294 +4,196 @@
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /**
  * Basic styling
  */
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: #222;
-    background-color: #fdfdfd;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
+  /* Notion은 깔끔한 산세리프 계열을 사용합니다 */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
 }
 
 /**
- * Set `margin-bottom` to maintain vertical rhythm
+ * Maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+ul, ol, dl, figure {
+  margin-bottom: 1rem;
 }
 
 /**
- * Articles
+ * Articles (Post Container)
+ * 노션 스타일은 깔끔한 흰색 배경과 약간의 라운딩, 여백을 강조합니다.
  */
 article {
-    background: #ececec;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
-    margin-bottom: $spacing-unit;
-    padding: 3em 3em 1em;
-
-    @include media-query($on-palm) {
-        padding: 1em 1em 0.3em;
-    }
-
-    > .entry-content {
-        @include media-query($on-palm) {
-            font-size: 80%;
-        }
-
-        &:first-letter {
-            color: #12462f;
-            display: inline-block;
-            float: left;
-            font-family: "Playfair Display";
-            font-size: 121px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 70px;
-            margin: 6px 10px 0 -5px;
-
-            @include media-query($on-palm) {
-                font-size: 70px;
-                line-height: 30px;
-            }
-        }
-
-        &:first-line {
-            color: #787878;
-            font-family: "Playfair Display SC";
-            font-size: 1em;
-            font-style: normal !important;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-    }
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
+/**
+ * Entry Content
+ */
+article > .entry-content {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/**
+ * Post Header
+ * 상단에 얇은 라인과 메인 컬러의 액센트 바를 추가합니다.
+ */
 .post-header {
-    border-bottom: 1px solid #b9e2ce;
-    margin-bottom: 2rem;
-    text-align: center;
-
-    &:before {
-        background: #e5f7ee;
-        border: 1px solid #b9e2ce;
-        border-radius: 50%;
-        box-shadow: 0 0 0 4px #e5f7ee;
-        color: #269462;
-        content: "p";
-        display: inline-block;
-        font-family: libretto-icons;
-        font-size: 21px;
-        line-height: 21px;
-        margin: 1rem auto 2rem;
-        padding: 10px;
-        text-shadow: none;
-    }
-
-    > div {
-        color: #555;
-        font-size: $base-font-size;
-        font-style: italic;
-
-        @include media-query($on-palm) {
-            font-size: $small-font-size;
-        }
-
-        &:before,
-        &:after {
-            color: #b9e2ce;
-            font-family: libretto-icons;
-            font-size: 24px;
-            margin: 0 0.25rem;
-            text-shadow: none;
-            vertical-align: -6px;
-        }
-
-        &:before {
-            content: "~";
-        }
-
-        &:after {
-            content: "`";
-        }
-    }
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
 }
 
-.post-list {
-    .post-header {
-        &:before {
-            background: #eae9e6;
-            border-color: #faf9f5;
-            box-shadow: 0 0 0 4px #eae9e6;
-        }
-    }
+.post-header:before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: #269462;
+  margin: 0 auto 1rem;
+  border-radius: 2px;
 }
 
 /**
  * Images
  */
 img {
-    max-width: 100%;
-    vertical-align: middle;
+  max-width: 100%;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
 }
 
 /**
  * Figures
  */
 figure {
-    background: #fff;
-    box-shadow: 1px 1px 4px rgba(38, 148, 98, 0.1);
-    border: 1px solid #ccebdd;
-    padding: 0.5em;
-}
-
-figure > img {
-    display: block;
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
 figcaption {
-    color: #666;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.2;
-    margin: 1em 0.5em 0.5em;
-    text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
 }
 
 /**
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  margin-left: 1.5rem;
 }
 
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    line-height: initial;
-    font-weight: $base-font-weight;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #111;
 }
 
 /**
  * Links
  */
 a {
-    color: #269462;
-    text-decoration: none;
+  color: #269462;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
 
-    &:hover {
-        color: darken(#269462, 10%);
-        text-decoration: underline;
-    }
+a:hover {
+  border-bottom: 1px solid #269462;
 }
 
 /**
  * Blockquotes
+ * 노션의 인용구는 심플하면서도 메인 컬러로 포인트를 줍니다.
  */
 blockquote {
-    color: #1e6244;
-    border-left: 4px solid #b9e2ce;
-    background-color: #f5fdf7;
-    padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-
-    > :last-child {
-        margin-bottom: 0;
-    }
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #269462;
+  color: #555;
+  font-style: italic;
 }
 
 /**
  * Code formatting
+ * 깔끔한 배경과 라운딩 처리로 Notion의 코드 블록 느낌을 구현합니다.
  */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid #b9e2ce;
-    border-radius: 3px;
-    background-color: #e5f7ee;
-}
-
-code {
-    color: #1e6244;
-    padding: 1px 5px;
+pre, code {
+  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.9rem;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+code {
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
 }
 
 /**
  * Wrapper
+ * 콘텐츠 너비를 제한해 중앙 정렬합니다.
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /**
  * Clearfix
  */
 %clearfix {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 /**
- * Icons
+ * Icons (if used)
  */
-.icon {
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: #269462;
-        }
-    }
+.icon > svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  fill: #269462;
 }
