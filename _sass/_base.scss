@@ -8,15 +8,13 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    color: #222;
+    background-color: #fdfdfd;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -24,8 +22,6 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -36,8 +32,6 @@ ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
-
-
 
 /**
  * Articles
@@ -145,8 +139,6 @@ article {
     }
 }
 
-
-
 /**
  * Images
  */
@@ -155,14 +147,13 @@ img {
     vertical-align: middle;
 }
 
-
-
 /**
  * Figures
  */
 figure {
     background: #fff;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.025);
+    box-shadow: 1px 1px 4px rgba(38, 148, 98, 0.1);
+    border: 1px solid #ccebdd;
     padding: 0.5em;
 }
 
@@ -171,15 +162,13 @@ figure > img {
 }
 
 figcaption {
-    color: $grey-color;
+    color: #666;
     font-size: 16px;
     font-style: italic;
     line-height: 1.2;
     margin: 1em 0.5em 0.5em;
     text-align: center;
 }
-
-
 
 /**
  * Lists
@@ -195,8 +184,6 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
@@ -205,29 +192,26 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
-
-
 /**
  * Links
  */
 a {
-    color: $brand-color;
+    color: #269462;
     text-decoration: none;
 
     &:hover {
-        color: darken($brand-color, 5%);
-        text-decoration: none;
+        color: darken(#269462, 10%);
+        text-decoration: underline;
     }
 }
-
-
 
 /**
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: #1e6244;
+    border-left: 4px solid #b9e2ce;
+    background-color: #f5fdf7;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
     letter-spacing: -1px;
@@ -238,20 +222,19 @@ blockquote {
     }
 }
 
-
-
 /**
  * Code formatting
  */
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid #b9e2ce;
     border-radius: 3px;
     background-color: #e5f7ee;
 }
 
 code {
+    color: #1e6244;
     padding: 1px 5px;
 }
 
@@ -265,8 +248,6 @@ pre {
         padding-left: 0;
     }
 }
-
-
 
 /**
  * Wrapper
@@ -288,13 +269,10 @@ pre {
     }
 }
 
-
-
 /**
  * Clearfix
  */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -302,13 +280,10 @@ pre {
     }
 }
 
-
-
 /**
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
@@ -316,7 +291,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: #269462;
         }
     }
 }
