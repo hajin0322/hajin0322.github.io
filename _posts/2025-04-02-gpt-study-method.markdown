@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GPT로 공부하는 방법"
-date: 2025-04-02 22:00:00 +0900
+date: 2025-04-02 16:00:00 +0900
 categories: [학습과학]
 tags: [GPT, 공부법, Bloom's Taxonomy, SEE-DO-FEEDBACK]
 ---
