@@ -43,7 +43,7 @@ ul, ol, dl, figure,
  * Articles
  */
 article {
-    background: #faf9f5;
+    background: #ececec;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: $spacing-unit;
     padding: 3em 3em 1em;
@@ -58,7 +58,7 @@ article {
         }
 
         &:first-letter {
-            color: #b7b1a9;
+            color: #12462f;
             display: inline-block;
             float: left;
             font-family: "Playfair Display";
@@ -75,7 +75,7 @@ article {
         }
 
         &:first-line {
-            color: #787065;
+            color: #787878;
             font-family: "Playfair Display SC";
             font-size: 1em;
             font-style: normal !important;
@@ -86,16 +86,16 @@ article {
 }
 
 .post-header {
-    border-bottom: 1px solid #d9d6d0;
+    border-bottom: 1px solid #b9e2ce;
     margin-bottom: 2rem;
     text-align: center;
 
     &:before {
-        background: #faf9f5;
-        border: 1px solid #d9d6d0;
+        background: #e5f7ee;
+        border: 1px solid #b9e2ce;
         border-radius: 50%;
-        box-shadow: 0 0 0 4px #faf9f5;
-        color: #a09a92;
+        box-shadow: 0 0 0 4px #e5f7ee;
+        color: #269462;
         content: "p";
         display: inline-block;
         font-family: libretto-icons;
@@ -107,7 +107,7 @@ article {
     }
 
     > div {
-        color: $grey-color;
+        color: #555;
         font-size: $base-font-size;
         font-style: italic;
 
@@ -115,10 +115,9 @@ article {
             font-size: $small-font-size;
         }
 
-        &:before {
-            color: #d9d6d0;
-            content: "~";
-            display: inline-block;
+        &:before,
+        &:after {
+            color: #b9e2ce;
             font-family: libretto-icons;
             font-size: 24px;
             margin: 0 0.25rem;
@@ -126,15 +125,12 @@ article {
             vertical-align: -6px;
         }
 
+        &:before {
+            content: "~";
+        }
+
         &:after {
-            color: #d9d6d0;
             content: "`";
-            display: inline-block;
-            font-family: libretto-icons;
-            font-size: 24px;
-            margin: 0 0.25rem;
-            text-shadow: none;
-            vertical-align: -6px;
         }
     }
 }
@@ -252,7 +248,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #e5f7ee;
 }
 
 code {
