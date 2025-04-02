@@ -9,13 +9,13 @@ dl, dd, ol, ul, figure {
 }
 
 /**
-* Basic styling
-*/
-body {
-    /* Notion은 깔끔한 산세리프 계열을 사용합니다 */
+ * Basic styling
+ */
+ body {
+    /* 기본 폰트 크기를 살짝 키워서 본문도 더 크고 읽기 편하게 */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;   /* 기존 16px에서 증가 */
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -24,6 +24,7 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
+
 
 /**
 * Maintain vertical rhythm
@@ -41,7 +42,7 @@ ul, ol, dl, figure {
 article {
     background: #fff;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    border-radius: 16px;  /* 기존 8px에서 더 둥글게 */
     padding: 2rem;
     margin-bottom: 2rem;
 }
@@ -58,12 +59,14 @@ article > .entry-content {
  * Post Header
  * 상단에 얇은 라인과 메인 컬러의 액센트 바를 추가합니다.
  */
-.post-header {
+ .post-header {
     text-align: center;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;   /* 위쪽 간격 증가 */
+    padding-bottom: 1.5rem;/* 아래쪽 간격 증가 */
 }
+
 
 .post-header:before {
     content: "";
@@ -73,6 +76,47 @@ article > .entry-content {
     background: #269462;
     margin: 0 auto 1rem;
     border-radius: 2px;
+}
+
+/**
+ * Post Title (포스트 제목)
+ */
+ .post-title {
+    color: #000;  /* 제목은 검정색 */
+    font-family: "Playfair Display";
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+    font-weight: 700;  /* 진하게 */
+    margin-top: 2rem;  /* 위쪽 간격 증가 */
+    margin-bottom: 2rem; /* 아래쪽 간격 증가 */
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+/**
+ * Site header
+ */
+ .site-header {
+    background: #ffffff;
+    border-top: 5px solid $title-color;
+    border-bottom: 1px solid $background-color;
+    min-height: 56px;
+    text-align: center;
+    padding-top: 1.5rem;   /* 위쪽 간격 증가 */
+    padding-bottom: 1.5rem;  /* 아래쪽 간격 증가 */
+    position: relative;
+}
+
+.site-title {
+    font-family: "Playfair Display";
+    font-size: 42px;       /* 제목 크기를 키워서 본문과의 차이를 강조 */
+    font-weight: 700;      /* 진한 글씨 */
+    line-height: 1.2;
+    margin-top: 1.5rem;    /* 위쪽 간격 추가 */
+    margin-bottom: 1.5rem; /* 아래쪽 간격 추가 */
+    color: #000;          /* 검정색 */
 }
 
 /**
